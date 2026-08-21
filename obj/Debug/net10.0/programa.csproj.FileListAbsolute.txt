@@ -12,3 +12,18 @@ C:\Users\Usuario\Desktop\DATOS I\programa\obj\Debug\net10.0\refint\programa.dll
 C:\Users\Usuario\Desktop\DATOS I\programa\obj\Debug\net10.0\programa.pdb
 C:\Users\Usuario\Desktop\DATOS I\programa\obj\Debug\net10.0\programa.genruntimeconfig.cache
 C:\Users\Usuario\Desktop\DATOS I\programa\obj\Debug\net10.0\ref\programa.dll
+C:\Users\Fariathna\Desktop\Concesionario\obj\Debug\net10.0\programa.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Fariathna\Desktop\Concesionario\obj\Debug\net10.0\programa.AssemblyInfoInputs.cache
+C:\Users\Fariathna\Desktop\Concesionario\obj\Debug\net10.0\programa.AssemblyInfo.cs
+C:\Users\Fariathna\Desktop\Concesionario\obj\Debug\net10.0\programa.csproj.CoreCompileInputs.cache
+C:\Users\Fariathna\Desktop\Concesionario\obj\Debug\net10.0\programa.sourcelink.json
+C:\Users\Fariathna\Desktop\Concesionario\obj\Debug\net10.0\programa.dll
+C:\Users\Fariathna\Desktop\Concesionario\obj\Debug\net10.0\refint\programa.dll
+C:\Users\Fariathna\Desktop\Concesionario\obj\Debug\net10.0\programa.pdb
+C:\Users\Fariathna\Desktop\Concesionario\bin\Debug\net10.0\programa.exe
+C:\Users\Fariathna\Desktop\Concesionario\bin\Debug\net10.0\programa.deps.json
+C:\Users\Fariathna\Desktop\Concesionario\bin\Debug\net10.0\programa.runtimeconfig.json
+C:\Users\Fariathna\Desktop\Concesionario\bin\Debug\net10.0\programa.dll
+C:\Users\Fariathna\Desktop\Concesionario\bin\Debug\net10.0\programa.pdb
+C:\Users\Fariathna\Desktop\Concesionario\obj\Debug\net10.0\programa.genruntimeconfig.cache
+C:\Users\Fariathna\Desktop\Concesionario\obj\Debug\net10.0\ref\programa.dll
