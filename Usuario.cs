@@ -76,3 +76,33 @@ class Cliente : Usuario
         return infoBase + infoPropia;
     }
 }
+
+class Vendedor: Usuario
+{
+    private List<string> historialVentas;
+    private string puesto;
+    private double salario;
+
+    public Vendedor(string nombre, string cedula, int telefono, string puesto, double salario): base(nombre, cedula, telefono)
+    {
+        this.puesto = puesto;
+        this.salario = salario;
+        this.historialVentas = new List<string>();
+    }    
+
+    public override string MostrarInfo()
+    {
+        string infoBase = base.MostrarInfo();
+        string infoPropia = $"Salario: {salario}\n" +
+                             $"Puesto: {puesto}\n" +
+                             $"Historial de ventas: {historialVentas.Count}\n";
+
+
+        foreach (string venta in historialVentas)
+    {
+        infoPropia += "-- Venta --\n" + venta + "\n";
+    }
+
+    return infoBase + infoPropia;
+}
+}
