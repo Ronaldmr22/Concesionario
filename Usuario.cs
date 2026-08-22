@@ -14,6 +14,11 @@ class Usuario
         this.telefono = telefono;
     }
 
+    public string GetNombre()
+    {
+        return nombre;
+    }
+
     public virtual string MostrarInfo()
     {
         return $"Nombre: {nombre}\n" +

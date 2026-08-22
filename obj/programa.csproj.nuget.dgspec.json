@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Fariathna\\Desktop\\Concesionario\\programa.csproj": {}
+    "C:\\Users\\Usuario\\Desktop\\Concesionario\\programa.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Fariathna\\Desktop\\Concesionario\\programa.csproj": {
+    "C:\\Users\\Usuario\\Desktop\\Concesionario\\programa.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Fariathna\\Desktop\\Concesionario\\programa.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\Concesionario\\programa.csproj",
         "projectName": "programa",
-        "projectPath": "C:\\Users\\Fariathna\\Desktop\\Concesionario\\programa.csproj",
-        "packagesPath": "C:\\Users\\Fariathna\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Fariathna\\Desktop\\Concesionario\\obj\\",
+        "projectPath": "C:\\Users\\Usuario\\Desktop\\Concesionario\\programa.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Usuario\\Desktop\\Concesionario\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Fariathna\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
