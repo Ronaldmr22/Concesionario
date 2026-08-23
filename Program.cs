@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 internal class Program
 {
@@ -22,7 +23,7 @@ internal class Program
         bool funcionando = true;
         Console.WriteLine("--BIENVENIDO AL CONCESIONARIO A TODO GAS--");
         Console.WriteLine("--Ingresa tu nombre--");
-        string nombre = Console.ReadLine();
+        string nombre = Console.ReadLine()!;
         while (funcionando){
             if (nombresClientes.Contains(nombre))
             {
@@ -36,7 +37,7 @@ internal class Program
                     "6. Solicitar presupuesto\n" +
                     "7. Salir"
                 );
-                byte seleccion = byte.Parse(Console.ReadLine());
+                byte seleccion = byte.Parse(Console.ReadLine()!);
 
                 switch (seleccion)
                 {
@@ -71,7 +72,7 @@ internal class Program
                 }
 
             }
-            if (nombresVendedores.Contains(nombre))
+            else if (nombresVendedores.Contains(nombre))
             {
                 Console.WriteLine(
                     $"Hola {nombre}, Ingresa alguna opción\n" +
@@ -80,7 +81,7 @@ internal class Program
                     "3. Enviar a reparación\n" +
                     "4. Salir"
                 );
-                byte seleccion = byte.Parse(Console.ReadLine());
+                byte seleccion = byte.Parse(Console.ReadLine()!);
 
                 switch (seleccion)
                 {
@@ -91,6 +92,8 @@ internal class Program
                         Console.WriteLine("Opción 2");
                         break;
                     case 3:
+                        Console.WriteLine("Opción 3");
+                        break;
                     case 4:
                         funcionando = false;
                         break;

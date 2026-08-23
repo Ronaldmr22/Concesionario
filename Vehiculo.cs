@@ -51,7 +51,7 @@ class Carro : Vehiculo
 }
 
 class Moto : Vehiculo
-    {
+{
       protected int cantidadLlantas = 2;
 
       public Moto(string placa, string color, double precio, string marca)
@@ -66,8 +66,4 @@ class Moto : Vehiculo
 
             return infoBase + infoPropia;
         }
-    }
-
-
-
-    
+ }
