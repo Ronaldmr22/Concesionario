@@ -43,12 +43,12 @@ class Cliente : Usuario
         this.vehiculosComprados = new List<Vehiculo>();
     }
 
-    public void ComprarVehiculo(Vehiculo vehiculo)
+    public bool ComprarVehiculo(Vehiculo vehiculo)
     {
         if (licencia == false)
         {
             Console.WriteLine("No puedes comprar un vehículo sin tener licencia");
-            return;
+            return false;
         }
 
         double precio = vehiculo.GetPrecio();
@@ -56,7 +56,7 @@ class Cliente : Usuario
         if (presupuesto < precio)
         {
             Console.WriteLine("El precio del vehículo es mayor al presupuesto, no puedes comprarlo");
-            return;
+            return false;
         }
 
         presupuesto -= precio;
@@ -64,7 +64,19 @@ class Cliente : Usuario
         historialCompra.Add($"Factura por {precio}");
 
         Console.WriteLine("Compra realizada con éxito.");
+        return true;
     }
+
+    public double GetPresupuesto()
+    {
+        return presupuesto;
+    }
+
+    public List<Vehiculo> GetVehiculosComprados()
+    {
+        return vehiculosComprados;
+    }
+
 
     public override string MostrarInfo()
     {
@@ -93,7 +105,12 @@ class Vendedor: Usuario
         this.puesto = puesto;
         this.salario = salario;
         this.historialVentas = new List<string>();
-    }    
+    }
+
+    public void RegistrarVenta(string descripcion)
+    {
+        historialVentas.Add(descripcion);
+    }
 
     public override string MostrarInfo()
     {

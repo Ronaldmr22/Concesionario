@@ -19,6 +19,16 @@ abstract class Vehiculo
     
     }
 
+    public string GetPlaca()
+    {
+        return placa;
+    }
+
+    public string GetMarca()
+    {
+        return marca;
+    }
+
     public virtual string MostrarInfo()
     {
         return $"Placa: {placa}\n" +
@@ -31,6 +41,9 @@ abstract class Vehiculo
     {
         Console.WriteLine($"El vehículo con placa {placa} ha sido enviado a reparación.");
     }
+
+    
+
 }
 
 class Carro : Vehiculo
@@ -47,6 +60,37 @@ class Carro : Vehiculo
         string infoPropia = $"Cantidad de puertas: {cantidadPuertas}\n";
 
         return infoBase + infoPropia;
+    }
+
+    public virtual void UsarCarro()
+    {
+        Console.WriteLine("Usando Carro");
+    }
+}
+
+class CarroCombustible : Carro
+{
+    public CarroCombustible(string placa, string color, double precio, string marca)
+        : base(placa, color, precio, marca)
+    {
+    }
+
+    public override void UsarCarro()
+    {
+        Console.WriteLine($"El carro {marca} (placa {placa}) funciona con motor de combustión, ¡a llenar el tanque!");
+    }
+}
+
+class CarroElectrico : Carro
+{
+    public CarroElectrico(string placa, string color, double precio, string marca)
+        : base(placa, color, precio, marca)
+    {
+    }
+
+    public override void UsarCarro()
+    {
+        Console.WriteLine($"El carro {marca} (placa {placa}) es eléctrico, ¡no necesita gasolina, solo enchufarlo!");
     }
 }
 

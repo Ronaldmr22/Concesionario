@@ -15,11 +15,18 @@ internal class Program
 
         concesionario.CrearVendedor("Sonia", "156932", 693524, "Manager", 1200);
 
+        concesionario.CrearVehiculo("combustible", "PLC-001", "Rojo", 800, "Toyota");
+        concesionario.CrearVehiculo("combustible", "PLC-002", "Negro", 1500, "Honda");
+        concesionario.CrearVehiculo("electrico", "PLC-003", "Blanco", 2500, "Tesla");
+        concesionario.CrearVehiculo("electrico", "PLC-004", "Gris", 2200, "Nissan");
+        concesionario.CrearVehiculo("moto", "MOT-001", "Azul", 500, "Yamaha");
+        concesionario.CrearVehiculo("moto", "MOT-002", "Blanco", 900, "Suzuki");
+
         List<string> nombresClientes = concesionario.ObtenerNombresClientes();
         List<string> nombresVendedores = concesionario.ObtenerNombresVendedores();
         
 
-        
+
         bool funcionando = true;
         Console.WriteLine("--BIENVENIDO AL CONCESIONARIO A TODO GAS--");
         Console.WriteLine("--Ingresa tu nombre--");
@@ -27,6 +34,8 @@ internal class Program
         while (funcionando){
             if (nombresClientes.Contains(nombre))
             {
+                Cliente cliente = concesionario.BuscarCliente(nombre)!;
+
                 Console.WriteLine(
                     $"Hola {nombre}, Ingresa alguna opción\n" +
                     "1. Comprar carro\n" +
@@ -42,22 +51,24 @@ internal class Program
                 switch (seleccion)
                 {
                     case 1:
-                        Console.WriteLine("Opción 1");
+                        concesionario.ComprarVehiculo(cliente, "carro");
                         break;
                     case 2:
-                        Console.WriteLine("Opción 2");
+                        concesionario.ComprarVehiculo(cliente, "moto");
                         break;
                     case 3:
-                        Console.WriteLine("Opción 3");
+                        Console.WriteLine("Ingresa la placa del vehículo a reparar:");
+                        string placaReparar = Console.ReadLine()!;
+                        concesionario.EnviarReparacion(placaReparar);
                         break;
                     case 4:
-                        Console.WriteLine("Opción 4");
+                        concesionario.UsarVehiculo(cliente, "carro");
                         break;
                     case 5:
-                        Console.WriteLine("Opción 5");
+                        concesionario.UsarVehiculo(cliente, "moto");
                         break;
                     case 6:
-                        Console.WriteLine("Opción 6");
+                        concesionario.SolicitarPresupuesto(cliente);
                         break;
                     case 7:
                         funcionando = false;
@@ -74,6 +85,8 @@ internal class Program
             }
             else if (nombresVendedores.Contains(nombre))
             {
+                Vendedor vendedor = concesionario.BuscarVendedor(nombre)!;
+
                 Console.WriteLine(
                     $"Hola {nombre}, Ingresa alguna opción\n" +
                     "1. Comprar carro\n" +
@@ -86,13 +99,15 @@ internal class Program
                 switch (seleccion)
                 {
                     case 1:
-                        Console.WriteLine("Opción 1");
+                        concesionario.RegistrarVentaVendedor(vendedor, "carro");
                         break;
                     case 2:
-                        Console.WriteLine("Opción 2");
+                        concesionario.RegistrarVentaVendedor(vendedor, "moto");
                         break;
                     case 3:
-                        Console.WriteLine("Opción 3");
+                        Console.WriteLine("Ingresa la placa del vehículo a reparar:");
+                        string placaReparar = Console.ReadLine()!;
+                        concesionario.EnviarReparacion(placaReparar);
                         break;
                     case 4:
                         funcionando = false;
@@ -103,7 +118,6 @@ internal class Program
                     default:
                         Console.WriteLine("Opción inválida");
                         break;
-
                 }
             }
             else
@@ -113,9 +127,5 @@ internal class Program
             }
 
         }
-        
-
-        
-        
     }
 }
