@@ -17,19 +17,19 @@ class Concesionario
     {
         Vehiculo vehiculo;
 
-        if (tipo.Equals("combustible", StringComparison.OrdinalIgnoreCase))
+        if (tipo.Equals("combustible"))
         {
             vehiculo = new CarroCombustible(placa, color, precio, marca);
         }
-        else if (tipo.Equals("electrico", StringComparison.OrdinalIgnoreCase))
+        else if (tipo.Equals("electrico"))
         {
             vehiculo = new CarroElectrico(placa, color, precio, marca);
         }
-        else if (tipo.Equals("carro", StringComparison.OrdinalIgnoreCase))
+        else if (tipo.Equals("carro"))
         {
             vehiculo = new Carro(placa, color, precio, marca);
         }
-        else if (tipo.Equals("moto", StringComparison.OrdinalIgnoreCase))
+        else if (tipo.Equals("moto"))
         {
             vehiculo = new Moto(placa, color, precio, marca);
         }

@@ -42,8 +42,6 @@ abstract class Vehiculo
         Console.WriteLine($"El vehículo con placa {placa} ha sido enviado a reparación.");
     }
 
-    
-
 }
 
 class Carro : Vehiculo
@@ -77,7 +75,7 @@ class CarroCombustible : Carro
 
     public override void UsarCarro()
     {
-        Console.WriteLine($"El carro {marca} (placa {placa}) funciona con motor de combustión, ¡a llenar el tanque!");
+        Console.WriteLine($"Usando Carro");
     }
 }
 
@@ -90,7 +88,7 @@ class CarroElectrico : Carro
 
     public override void UsarCarro()
     {
-        Console.WriteLine($"El carro {marca} (placa {placa}) es eléctrico, ¡no necesita gasolina, solo enchufarlo!");
+        Console.WriteLine($"Usando Carro Eléctrico");
     }
 }
 

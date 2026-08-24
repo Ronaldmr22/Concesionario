@@ -75,7 +75,6 @@ internal class Program
                         break;
 
 
-
                     default:
                         Console.WriteLine("Opción inválida");
                         break;
@@ -89,8 +88,8 @@ internal class Program
 
                 Console.WriteLine(
                     $"Hola {nombre}, Ingresa alguna opción\n" +
-                    "1. Comprar carro\n" +
-                    "2. Comprar moto\n" +
+                    "1. Vender carro\n" +
+                    "2. Vender moto\n" +
                     "3. Enviar a reparación\n" +
                     "4. Salir"
                 );
