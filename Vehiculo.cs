@@ -52,6 +52,11 @@ class Carro : Vehiculo
     {
     }
 
+    public virtual void UsarCarro()
+    {
+        Console.WriteLine("Usando Carro");
+    }
+
     public override string MostrarInfo()
     {
         string infoBase = base.MostrarInfo();
@@ -60,37 +65,10 @@ class Carro : Vehiculo
         return infoBase + infoPropia;
     }
 
-    public virtual void UsarCarro()
-    {
-        Console.WriteLine("Usando Carro");
-    }
+    
 }
 
-class CarroCombustible : Carro
-{
-    public CarroCombustible(string placa, string color, double precio, string marca)
-        : base(placa, color, precio, marca)
-    {
-    }
 
-    public override void UsarCarro()
-    {
-        Console.WriteLine($"Usando Carro");
-    }
-}
-
-class CarroElectrico : Carro
-{
-    public CarroElectrico(string placa, string color, double precio, string marca)
-        : base(placa, color, precio, marca)
-    {
-    }
-
-    public override void UsarCarro()
-    {
-        Console.WriteLine($"Usando Carro Eléctrico");
-    }
-}
 
 class Moto : Vehiculo
 {
