@@ -68,7 +68,41 @@ class Carro : Vehiculo
     
 }
 
+class CarroCombustible : Carro
+{
+    public CarroCombustible(string placa, string color, double precio, string marca)
+        : base(placa, color, precio, marca)
+    {
+    }
 
+    public override string MostrarInfo()
+    {
+        return base.MostrarInfo() + "Tipo de carro: Combustible\n";
+    }
+
+    public override void UsarCarro()
+    {
+        Console.WriteLine("Usando Carro de Combustible");
+    }
+}
+
+class CarroElectrico : Carro
+{
+    public CarroElectrico(string placa, string color, double precio, string marca)
+        : base(placa, color, precio, marca)
+    {
+    }
+
+    public override string MostrarInfo()
+    {
+        return base.MostrarInfo() + "Tipo de carro: Eléctrico\n";
+    }
+
+    public override void UsarCarro()
+    {
+        Console.WriteLine("Usando Carro Eléctrico");
+    }
+}
 
 class Moto : Vehiculo
 {
